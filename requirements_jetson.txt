@@ -1,0 +1,12 @@
+# --- NVIDIA Jetson Orin Nano Optimized Packages ---
+
+numpy>=1.24.0
+opencv-python>=4.8.0
+pyserial>=3.5
+
+# PyTorch  ARM64 (aarch64) - CUDA
+https://github.com/ultralytics/assets/releases/download/v0.0.0/torch-2.5.0a0+872d972e41.nv24.08-cp310-cp310-linux_aarch64.whl
+https://github.com/ultralytics/assets/releases/download/v0.0.0/torchvision-0.20.0a0+afc54f7-cp310-cp310-linux_aarch64.whl
+
+# YOLO (Ultralytics) ;TensorRT/Edge AI
+ultralytics[export]>=8.3.240

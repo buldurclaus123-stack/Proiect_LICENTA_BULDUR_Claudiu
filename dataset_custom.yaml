@@ -1,0 +1,9 @@
+path: C:/Users/claud/Desktop/Proiect_Varianta 1
+train: images/train
+val: images/val
+
+names:
+  0: Masina
+  1: Persoana
+  2: Pisica
+  3: Porumbel
