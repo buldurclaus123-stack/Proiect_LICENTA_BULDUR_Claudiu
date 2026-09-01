@@ -1,0 +1,69 @@
+2)Proiect mecanism rotire cameră(Arduino IDLE): 
+
+const int pinPulse = 9;  
+
+const int pinDirection = 8;  
+
+const int pinSwitch = 2;  
+
+const int unghi = 180; 
+
+const float pasmin = 1.8; 
+
+const int pasiPeRotatie = round(unghi / pasmin); 
+
+void setup() { 
+
+pinMode(pinPulse, OUTPUT); 
+
+pinMode(pinDirection, OUTPUT); 
+
+pinMode(pinSwitch, INPUT_PULLUP); 
+
+} 
+
+void loop() { 
+
+int stareSwitch = digitalRead(pinSwitch); 
+
+if (stareSwitch == LOW) { 
+
+digitalWrite(pinDirection, HIGH); 
+
+for (int x = 0; x < pasiPeRotatie; x++) { 
+
+digitalWrite(pinPulse, HIGH); 
+
+delayMicroseconds(1000);  
+
+digitalWrite(pinPulse, LOW); 
+
+delayMicroseconds(1000); 
+
+} 
+
+delay(1000);  
+
+digitalWrite(pinDirection, LOW); 
+
+for (int x = 0; x < pasiPeRotatie; x++) { 
+
+digitalWrite(pinPulse, HIGH); 
+
+delayMicroseconds(1000); 
+
+116 
+
+digitalWrite(pinPulse, LOW); 
+
+delayMicroseconds(1000); 
+
+} 
+
+delay(1000);  
+
+} else { 
+
+} 
+
+}
